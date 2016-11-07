@@ -1,0 +1,12 @@
+.animal-gif {
+    display: block;
+    float: left;
+    padding: 7px;
+}
+.buttons{
+	padding: 5px;
+}
+button.btn.btn-primary.animal {
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
