@@ -5,7 +5,7 @@ window.onload = function(){
     giftastic.displayButtons();
     giftastic.switchGifs();
     giftastic.addAnimals();
-    giftastic.findAnimal();
+    //giftastic.findAnimal();
 };
 
 var giftastic = {
@@ -22,15 +22,13 @@ var giftastic = {
 		}
 	},
 	findAnimal: function(){
-		$('.animal').on('click',function() {
-			var animalName = $(this).data('name');
-			console.log(animalName);
-			giftastic.buildGifs(animalName);
-		});
+		var animalName = $(this).data('name');
+		console.log(animalName);
+		giftastic.buildGifs(animalName);
 	},
 	buildGifs: function(name){
 		$('.gifs').text("");
-		var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + name + "&api_key=dc6zaTOxFJmzC&limit=3";
+		var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + name + "&api_key=dc6zaTOxFJmzC&limit=10";
 		$.ajax({
             url: queryURL,
             method: 'GET'
